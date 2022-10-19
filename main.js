@@ -27,16 +27,18 @@ function getWord() {
         return {
           title: item.fields.title,
           description: item.fields.description,
-          // imagen: item.fields.file.uri,
+          imagen: data.includes.Asset[0].fields.file.url,
           url: item.fields.url.content[0].content[0].value,
         };
       });
       return fieldsCollection;
     });
-  // .then(function (assets) {
+  // .then((assets) => {
   //   assets.items.map(function (asset) {
-  //     var imageURL = 'https:' + asset.fields.file.url;
-  //   })
+  //     var imageURL = "https:" + asset.fields.file.url;
+  //     console.log(imageURL);
+  //   });
+  // });
 }
 
 function main() {
